@@ -19,4 +19,5 @@ dependencies {
     implementation(project.files("z3/com.microsoft.z3.jar"))
     implementation("guru.nidi:graphviz-kotlin:0.18.1")
     implementation("org.jgrapht:jgrapht-core:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.8")
 }
