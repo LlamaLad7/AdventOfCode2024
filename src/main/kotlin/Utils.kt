@@ -21,3 +21,7 @@ fun <T> List<T>.split(separator: T): List<List<T>> {
     }
     return result
 }
+
+private val intRegex = "[+-]?\\d+".toRegex()
+
+fun String.longs() = intRegex.findAll(this).map { it.value.toLong() }.toList()
