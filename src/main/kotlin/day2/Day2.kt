@@ -1,6 +1,6 @@
 package day2
 
-import getInput
+import utils.getInput
 import kotlin.math.abs
 
 fun main() {

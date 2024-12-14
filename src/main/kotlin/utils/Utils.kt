@@ -1,3 +1,5 @@
+package utils
+
 import java.io.File
 
 fun getInput(day: Int, test: Boolean, part: Int): List<String> {

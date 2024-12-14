@@ -1,7 +1,7 @@
 package day11
 
 import com.aballano.mnemonik.memoize
-import getInput
+import utils.getInput
 import kotlin.math.log10
 
 fun main() {

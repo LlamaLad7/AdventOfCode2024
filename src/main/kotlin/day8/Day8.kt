@@ -1,6 +1,6 @@
 package day8
 
-import getInput
+import utils.getInput
 import kotlin.math.absoluteValue
 
 fun main() {

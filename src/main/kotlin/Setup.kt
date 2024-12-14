@@ -32,7 +32,7 @@ fun main() = runBlocking {
 private fun getStubCode() = """
     package dayDAY
 
-    import getInput
+    import utils.getInput
 
     fun main() {
         dayDAYpart1(getInput(DAY, true, 1))

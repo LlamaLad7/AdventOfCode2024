@@ -1,8 +1,8 @@
 package day13
 
-import getInput
-import longs
-import split
+import utils.getInput
+import utils.longs
+import utils.split
 import utils.z3.z3Optimize
 
 fun main() {

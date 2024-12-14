@@ -1,6 +1,6 @@
 package day12
 
-import getInput
+import utils.getInput
 
 fun main() {
     day12part1(getInput(12, true, 1))

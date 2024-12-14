@@ -1,6 +1,6 @@
 package day10
 
-import getInput
+import utils.getInput
 
 fun main() {
     day10part1(getInput(10, true, 1))

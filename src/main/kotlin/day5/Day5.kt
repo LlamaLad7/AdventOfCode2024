@@ -1,7 +1,7 @@
 package day5
 
-import getInput
-import split
+import utils.getInput
+import utils.split
 
 private typealias Graph = Map<Int, List<Int>>
 

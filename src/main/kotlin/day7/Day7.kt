@@ -1,6 +1,6 @@
 package day7
 
-import getInput
+import utils.getInput
 import kotlinx.collections.immutable.PersistentList
 import kotlinx.collections.immutable.toPersistentList
 
