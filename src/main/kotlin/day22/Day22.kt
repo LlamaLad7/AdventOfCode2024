@@ -34,18 +34,11 @@ private const val MOD = 16777216
 
 private data class ChangeSequence(val first: Int, val second: Int, val third: Int, val fourth: Int)
 
-private fun priceByChanges(line: String): Map<ChangeSequence, Int> {
-    val result = mutableMapOf<ChangeSequence, Int>()
-    val seed = line.toLong()
-    val digits = generateSequence(seed, ::nextSecret).take(2001).map { (it % 10).toInt() }.toList()
-    var (first, second, third, fourth) = digits.asSequence().zipWithNext { a, b -> b - a }.take(4).toList()
-    result[ChangeSequence(first, second, third, fourth)] = digits[4]
-    for ((a, b) in digits.asSequence().drop(4).zipWithNext()) {
-        first = second
-        second = third
-        third = fourth
-        fourth = b - a
-        result.putIfAbsent(ChangeSequence(first, second, third, fourth), b)
-    }
-    return result
-}
+private fun priceByChanges(line: String) =
+    generateSequence(line.toLong(), ::nextSecret)
+        .take(2001)
+        .map { (it % 10).toInt() }
+        .windowed(5)
+        .map { (a, b, c, d, e) -> ChangeSequence(b - a, c - b, d - c, e - d) to e }
+        .distinctBy { it.first }
+        .toMap()
